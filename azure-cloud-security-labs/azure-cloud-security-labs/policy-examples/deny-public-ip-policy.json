@@ -1,0 +1,17 @@
+{
+  "properties": {
+    "displayName": "Deny Public IP",
+    "policyType": "BuiltIn",
+    "mode": "All",
+    "parameters": {},
+    "policyRule": {
+      "if": {
+        "field": "Microsoft.Network/publicIPAddresses/ipAddress",
+        "notEquals": null
+      },
+      "then": {
+        "effect": "deny"
+      }
+    }
+  }
+}
